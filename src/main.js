@@ -26,7 +26,7 @@ app.post('/email', function(req, res) {
 
 	nodemailerMailgun.sendMail({
 		from: 'message@condetur.com',
-		to: 'tino.caer@me.com', // An array if you have multiple recipients.
+		to: 'william_golub@horacemann.org', // An array if you have multiple recipients.
 		subject: 'New message from client: ' + name,
 		text: 'Email: ' + email + '\n' + body,
 	}, function (err, info) {
@@ -35,10 +35,6 @@ app.post('/email', function(req, res) {
 		} else {
 		}
 	});
-});
-
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(app.get('port'), function(err) {
